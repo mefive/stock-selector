@@ -71,12 +71,12 @@ def import_dce_daily(date):
     conn.close()
 
 
-def import_daily() -> object:
+def import_daily():
     print("=== main ===")
 
     dates: list = get_dates()
 
-    for i in range(1, 100):
+    for i in range(200, 300):
         date = datetime.date.today() - datetime.timedelta(days=i)
         date = date.strftime("%Y-%m-%d")
 
