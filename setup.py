@@ -5,5 +5,11 @@ setup(
     name='stock-selector',
     author='mefive',
     packages=find_packages(),
-    install_requires=['bs4', 'python-dateutil', 'pandas', 'tushare', 'SQLAlchemy']
+    install_requires=[
+        'tushare',
+        'bs4',
+        'python-dateutil',
+        'pandas',
+        'SQLAlchemy'
+    ]
 )

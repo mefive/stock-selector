@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Date, BigInteger
+from sqlalchemy import Column, Integer, String, Date, BigInteger, Unicode
 from stockseletor.models.base import Base
 
 
@@ -6,11 +6,11 @@ class StockBasic(Base):
     __tablename__ = 'stock_basic'
 
     id = Column(Integer, primary_key=True)
-    code = Column(String)
-    name = Column(String)
-    industry = Column(String)
-    area = Column(String)
-    pe = Column(String)
+    code = Column(String(20), index=True)
+    name = Column(Unicode(50))
+    industry = Column(String(100))
+    area = Column(String(100))
+    pe = Column(String(50))
     outstanding = Column(Integer)
     totals = Column(Integer)
     totalAssets = Column(Integer)
