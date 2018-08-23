@@ -44,9 +44,9 @@ def import_h_data(code, start, end):
             h_data = HData(
                 code=code,
                 date=index,
-                open=money.to_integer(row['open']),
-                close=money.to_integer(row['close']),
-                high=money.to_integer(row['high']),
+                open=row['open'],
+                close=row['close'],
+                high=row['high'],
                 volume=row['volume'],
                 amount=row['amount']
             )

@@ -14,7 +14,23 @@ def import_stock_basic():
             stock_basic = StockBasic(
                 code=index,
                 name=row['name'],
-                pe=money.to_integer(row['pe'])
+                industry=row['industry'],
+                area=row['area'],
+                pe=row['pe'],
+                outstanding=row['outstanding'],
+                totals=row['totals'],
+                total_assets=row['totalAssets'],
+                liquid_assets=row['liquidAssets'],
+                fixed_assets=row['fixedAssets'],
+                esp=row['esp'],
+                bvps=row['bvps'],
+                pb=row['pb'],
+                time_to_market=row['timeToMarket'] if row['timeToMarket'] != 0 else None,
+                undp=row['undp'],
+                perundp=row['perundp'],
+                rev=row['rev'],
+                profit=row['profit'],
+                npr=row['npr'],
             )
 
             session.add(stock_basic)
